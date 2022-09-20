@@ -8,7 +8,8 @@
 fn slice_out_of_array() {
     let a = [1, 2, 3, 4, 5];
 
-    let nice_slice = ???
+    // slice 是动态类型，只能在堆上，只能通过引用访问
+    let nice_slice = &a[1..5]; 
 
     assert_eq!([2, 3, 4], nice_slice)
 }
